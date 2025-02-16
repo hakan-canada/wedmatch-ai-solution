@@ -1,13 +1,34 @@
 
 import { useState } from "react";
 import { Card } from "../ui/card";
+import { CheckCircle } from "lucide-react";
 
 export const Problems = () => {
   const [stats] = useState([
-    { value: 40, label: "Ghosting Rate" },
-    { value: 30, label: "No-shows" },
-    { value: 40, label: "Style Regrets" },
-    { value: 20, label: "Last-minute Cancellations" },
+    { 
+      value: 40, 
+      label: "Ghosting Rate",
+      image: "https://images.unsplash.com/photo-1501286353178-1ec881214838",
+      description: "Photographers disappearing after initial contact"
+    },
+    { 
+      value: 30, 
+      label: "No-shows",
+      image: "https://images.unsplash.com/photo-1466721591366-2d5fba72006d",
+      description: "Last-minute cancellations leaving couples stranded"
+    },
+    { 
+      value: 40, 
+      label: "Style Regrets",
+      image: "https://images.unsplash.com/photo-1469041797191-50ace28483c3",
+      description: "Mismatched expectations in photography style"
+    },
+    { 
+      value: 20, 
+      label: "Last-minute Cancellations",
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
+      description: "Photographers backing out close to the wedding date"
+    },
   ]);
 
   return (
@@ -17,17 +38,28 @@ export const Problems = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             The Reality: Wedding Photography Problems Couples Face
           </h2>
-          <p className="text-gray-600">
-            Based on our surveys, AI sentiment analysis of online reviews, and industry research,
-            these are the most common wedding photography issues couples face.
+          <p className="text-gray-600 text-lg">
+            Based on our research and thousands of couple reviews
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => (
-            <Card key={index} className="p-6 text-center glass-card transform hover:scale-105 transition-transform">
-              <div className="text-4xl font-bold text-primary mb-2">{stat.value}%</div>
-              <div className="text-sm text-gray-600">{stat.label}</div>
+            <Card key={index} className="overflow-hidden group hover:shadow-lg transition-all">
+              <div className="h-48 relative overflow-hidden">
+                <img 
+                  src={stat.image} 
+                  alt={stat.label} 
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+                  <span className="text-4xl font-bold text-white">{stat.value}%</span>
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">{stat.label}</h3>
+                <p className="text-gray-600 text-sm">{stat.description}</p>
+              </div>
             </Card>
           ))}
         </div>
