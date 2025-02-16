@@ -11,15 +11,10 @@ export const HowItWorks = () => {
     {
       number: "02",
       title: "AI finds perfect matches",
-      description: "Get 3 verified photographers who match your style and budget.",
+      description: "Get matched with verified photographers and videographers who match your style and budget.",
     },
     {
       number: "03",
-      title: "Optional guidance",
-      description: "Get a quick manual selection session for extra help.",
-    },
-    {
-      number: "04",
       title: "Secure booking",
       description: "Book through escrow payments with a backup guarantee.",
     },
@@ -37,7 +32,7 @@ export const HowItWorks = () => {
         <div className="relative">
           <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-primary/20 -translate-y-1/2 hidden md:block" />
           
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 <div className="glass-card p-6 rounded-lg relative z-10">
