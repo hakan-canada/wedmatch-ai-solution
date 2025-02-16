@@ -1,7 +1,6 @@
 
 import { useState } from "react";
 import { Card } from "../ui/card";
-import { CheckCircle } from "lucide-react";
 
 export const Problems = () => {
   const [stats] = useState([
@@ -52,12 +51,12 @@ export const Problems = () => {
                   alt={stat.label} 
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-                  <span className="text-4xl font-bold text-white">{stat.value}%</span>
-                </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{stat.label}</h3>
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-xl font-semibold">{stat.label}</h3>
+                  <span className="text-3xl font-bold text-primary">{stat.value}%</span>
+                </div>
                 <p className="text-gray-600 text-sm">{stat.description}</p>
               </div>
             </Card>

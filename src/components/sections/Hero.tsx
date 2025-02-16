@@ -1,5 +1,5 @@
 
-import { ArrowRight, Camera, Shield, Sparkles, CheckCircle } from "lucide-react";
+import { ArrowRight, Shield, Sparkles } from "lucide-react";
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
@@ -8,9 +8,6 @@ export const Hero = () => {
     "AI-Powered Matching",
     "Secure Payments",
     "Backup Guarantee",
-    "Style Matching",
-    "Price Protection",
-    "Quality Assured"
   ];
 
   const testimonials = [
@@ -32,11 +29,11 @@ export const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
-          {/* Avatars */}
+          {/* Smaller Avatars */}
           <div className="flex justify-center mb-8">
-            <div className="flex -space-x-4">
+            <div className="flex -space-x-3">
               {testimonials.map((testimonial, i) => (
-                <Avatar key={i} className="border-4 border-white w-12 h-12">
+                <Avatar key={i} className="border-2 border-white w-8 h-8">
                   <AvatarImage src={testimonial.image} alt={testimonial.name} />
                   <AvatarFallback>{testimonial.name[0]}</AvatarFallback>
                 </Avatar>
@@ -63,10 +60,10 @@ export const Hero = () => {
               <ArrowRight className="ml-2" size={18} />
             </Button>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.6s" }}>
+            <div className="flex flex-wrap justify-center gap-6 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.6s" }}>
               {features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-2 text-white/90 justify-center">
-                  <CheckCircle className="w-5 h-5 text-primary" />
+                <div key={index} className="flex items-center gap-2 text-white/90">
+                  <Shield className="w-5 h-5 text-primary" />
                   <span className="text-sm md:text-base">{feature}</span>
                 </div>
               ))}
