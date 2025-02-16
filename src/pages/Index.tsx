@@ -5,6 +5,7 @@ import { Solutions } from "@/components/sections/Solutions";
 import { StyleGallery } from "@/components/sections/StyleGallery";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
       <StyleGallery />
       <HowItWorks />
       <Testimonials />
+      <FinalCTA />
     </div>
   );
 };
