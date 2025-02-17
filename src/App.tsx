@@ -8,6 +8,7 @@ import Photographers from "./pages/Photographers";
 import Videographers from "./pages/Videographers";
 import VendorDetail from "./pages/VendorDetail";
 import Contact from "./pages/Contact";
+import BecomeVendor from "./pages/BecomeVendor";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/videographers" element={<Videographers />} />
       <Route path="/videographers/:id" element={<VendorDetail />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/become-vendor" element={<BecomeVendor />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
