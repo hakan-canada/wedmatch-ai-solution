@@ -1,5 +1,5 @@
 
-import { ArrowRight, Shield, Sparkles, Gift } from "lucide-react";
+import { ArrowRight, Shield, Gift } from "lucide-react";
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
@@ -19,15 +19,7 @@ export const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden section-padding">
-      <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(https://images.unsplash.com/photo-1473177104440-ffee2f376098)`,
-        }}
-      />
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" />
-      
+    <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden section-padding bg-purple-500">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Smaller Avatars */}
