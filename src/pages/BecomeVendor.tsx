@@ -1,6 +1,7 @@
 
 import { ArrowRight, Check, Shield, Gift, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 import {
   Card,
   CardContent,
@@ -33,20 +34,20 @@ const BecomeVendor = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background py-16">
+    <AuroraBackground className="min-h-screen py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h1 className="text-4xl font-bold tracking-tight mb-4">
-            Become a Vendor—Grow Your Bookings Without Breaking the Bank
+            Become a Vendor
           </h1>
           <p className="text-xl text-muted-foreground">
-            Join our platform and connect with couples looking for their perfect wedding photographer or videographer.
+            Grow Your Bookings Without Breaking the Bank
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Free Plan */}
-          <Card className="relative">
+          <Card className="relative bg-white/80 backdrop-blur-sm">
             <CardHeader className="text-center">
               <CardTitle className="text-2xl">Free Plan</CardTitle>
               <CardDescription>Basic listing and bookings</CardDescription>
@@ -74,7 +75,7 @@ const BecomeVendor = () => {
           </Card>
 
           {/* Pro Plan */}
-          <Card className="relative border-primary">
+          <Card className="relative border-primary bg-white/80 backdrop-blur-sm">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2">
               <span className="bg-primary text-primary-foreground text-sm font-medium px-3 py-1 rounded-full">
                 Recommended
@@ -140,7 +141,7 @@ const BecomeVendor = () => {
           </div>
         </div>
       </div>
-    </div>
+    </AuroraBackground>
   );
 };
 
