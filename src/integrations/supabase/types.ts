@@ -9,7 +9,69 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      [_ in never]: never
+      vendors: {
+        Row: {
+          base_location: string
+          coverage_type: string
+          created_at: string
+          cultural_experience: string[] | null
+          description: string | null
+          featured_image_url: string | null
+          id: string
+          is_featured: boolean | null
+          name: string
+          price_range: string
+          rating: number | null
+          reviews_count: number | null
+          second_shooter_option: boolean | null
+          style_tags: string[] | null
+          travel_fee_details: string | null
+          travel_included_radius: number | null
+          updated_at: string
+          vendor_type: string
+        }
+        Insert: {
+          base_location: string
+          coverage_type: string
+          created_at?: string
+          cultural_experience?: string[] | null
+          description?: string | null
+          featured_image_url?: string | null
+          id?: string
+          is_featured?: boolean | null
+          name: string
+          price_range: string
+          rating?: number | null
+          reviews_count?: number | null
+          second_shooter_option?: boolean | null
+          style_tags?: string[] | null
+          travel_fee_details?: string | null
+          travel_included_radius?: number | null
+          updated_at?: string
+          vendor_type: string
+        }
+        Update: {
+          base_location?: string
+          coverage_type?: string
+          created_at?: string
+          cultural_experience?: string[] | null
+          description?: string | null
+          featured_image_url?: string | null
+          id?: string
+          is_featured?: boolean | null
+          name?: string
+          price_range?: string
+          rating?: number | null
+          reviews_count?: number | null
+          second_shooter_option?: boolean | null
+          style_tags?: string[] | null
+          travel_fee_details?: string | null
+          travel_included_radius?: number | null
+          updated_at?: string
+          vendor_type?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
