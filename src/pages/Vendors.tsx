@@ -39,7 +39,6 @@ const VendorCard = ({ vendor }: { vendor: Vendor }) => {
           <div className="flex items-center gap-1">
             <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
             <span className="font-medium">{vendor.rating}</span>
-            <span className="text-muted-foreground">({vendor.reviews_count})</span>
           </div>
         </div>
       </CardHeader>
@@ -49,7 +48,7 @@ const VendorCard = ({ vendor }: { vendor: Vendor }) => {
           <div>
             <p className="font-medium">{vendor.base_location}</p>
             <p className="text-sm text-muted-foreground">
-              Travels up to {vendor.travel_included_radius}km included
+              {vendor.travel_fee_details}
             </p>
           </div>
         </div>
