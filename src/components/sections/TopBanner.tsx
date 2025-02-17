@@ -36,6 +36,12 @@ export const TopBanner = () => {
             Find Your Match
           </Link>
           <Link 
+            to="/become-vendor" 
+            className="text-sm hover:text-white/80 transition-colors"
+          >
+            Become a Vendor
+          </Link>
+          <Link 
             to="/contact" 
             className="text-sm hover:text-white/80 transition-colors"
           >
@@ -80,6 +86,13 @@ export const TopBanner = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Find Your Match
+              </Link>
+              <Link 
+                to="/become-vendor" 
+                className="py-3 text-sm hover:text-white/80 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Become a Vendor
               </Link>
               <Link 
                 to="/contact" 

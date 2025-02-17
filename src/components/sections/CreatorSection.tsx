@@ -2,6 +2,7 @@
 import { Camera, FileText, Users } from "lucide-react";
 import { Button } from "../ui/button";
 import { Card } from "../ui/card";
+import { Link } from "react-router-dom";
 
 export const CreatorSection = () => {
   const benefits = [
@@ -48,10 +49,12 @@ export const CreatorSection = () => {
           <Button 
             size="lg" 
             variant="secondary"
-            onClick={() => window.location.href = '/creator-signup'}
             className="bg-white text-accent hover:bg-white/90"
+            asChild
           >
-            Join as a Creator
+            <Link to="/become-vendor">
+              Become a Vendor
+            </Link>
           </Button>
         </div>
       </div>

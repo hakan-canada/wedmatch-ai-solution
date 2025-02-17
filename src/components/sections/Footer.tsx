@@ -18,6 +18,7 @@ export const Footer = () => {
               <li><Link to="/photographers" className="text-sm text-white/80 hover:text-white">Wedding Photographers</Link></li>
               <li><Link to="/videographers" className="text-sm text-white/80 hover:text-white">Wedding Videographers</Link></li>
               <li><Link to="/match" className="text-sm text-white/80 hover:text-white">Find Your Match</Link></li>
+              <li><Link to="/become-vendor" className="text-sm text-white/80 hover:text-white">Become a Vendor</Link></li>
             </ul>
           </div>
           <div>
