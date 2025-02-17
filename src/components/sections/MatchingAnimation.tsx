@@ -1,8 +1,24 @@
 
 import { Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
 
 export const MatchingAnimation = () => {
+  const [currentText, setCurrentText] = useState(0);
+  const subtitles = [
+    "Your vision, their artistry",
+    "Your photographer found",
+    "Your love story, their lens"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentText((current) => (current + 1) % subtitles.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="relative h-56 md:h-72 w-full max-w-lg mx-auto p-4 md:p-8 overflow-hidden rounded-xl">
       {/* Photographer Card */}
@@ -16,7 +32,7 @@ export const MatchingAnimation = () => {
           <img
             src="https://ianylbuallxrimlgqzbk.supabase.co/storage/v1/object/public/Images//homepage-photographer.jpg"
             alt="Wedding Photographer"
-            className="h-full w-full object-cover rounded-2xl"
+            className="h-full w-full object-cover object-center rounded-2xl"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl">
             <div className="absolute bottom-0 p-3 md:p-4 text-white">
@@ -38,7 +54,7 @@ export const MatchingAnimation = () => {
           <img
             src="https://ianylbuallxrimlgqzbk.supabase.co/storage/v1/object/public/Images//homepage-couple.jpg"
             alt="Wedding Couple"
-            className="h-full w-full object-cover rounded-2xl"
+            className="h-full w-full object-cover object-center rounded-2xl"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl">
             <div className="absolute bottom-0 p-3 md:p-4 text-white">
@@ -63,8 +79,20 @@ export const MatchingAnimation = () => {
             <div className="bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent font-semibold text-xs md:text-sm">
               Perfect Match!
             </div>
-            <div className="text-white text-xs md:text-sm">
-              Your vision, their artistry
+            <div className="text-white text-xs md:text-sm h-5 relative overflow-hidden">
+              {subtitles.map((text, index) => (
+                <div
+                  key={index}
+                  className={cn(
+                    "absolute w-full transition-all duration-300",
+                    index === currentText 
+                      ? "top-0 opacity-100" 
+                      : "top-6 opacity-0"
+                  )}
+                >
+                  {text}
+                </div>
+              ))}
             </div>
           </div>
         </div>
