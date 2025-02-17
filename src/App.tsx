@@ -7,6 +7,7 @@ import MatchForm from "./pages/MatchForm";
 import Photographers from "./pages/Photographers";
 import Videographers from "./pages/Videographers";
 import VendorDetail from "./pages/VendorDetail";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/photographers/:id" element={<VendorDetail />} />
       <Route path="/videographers" element={<Videographers />} />
       <Route path="/videographers/:id" element={<VendorDetail />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
