@@ -1,5 +1,5 @@
 
-import { ArrowRight, Shield, Sparkles } from "lucide-react";
+import { ArrowRight, Shield, Sparkles, Gift } from "lucide-react";
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 
@@ -8,6 +8,7 @@ export const Hero = () => {
     "AI-Powered Matching",
     "Secure Payments",
     "Backup Guarantee",
+    "No Extra Cost to You",
   ];
 
   const testimonials = [
@@ -63,7 +64,11 @@ export const Hero = () => {
             <div className="flex flex-wrap justify-center gap-6 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.6s" }}>
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 text-white/90">
-                  <Shield className="w-5 h-5 text-primary" />
+                  {index === features.length - 1 ? (
+                    <Gift className="w-5 h-5 text-primary" />
+                  ) : (
+                    <Shield className="w-5 h-5 text-primary" />
+                  )}
                   <span className="text-sm md:text-base">{feature}</span>
                 </div>
               ))}
