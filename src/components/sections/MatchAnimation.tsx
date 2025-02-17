@@ -10,7 +10,6 @@ export const MatchAnimation = () => {
     const showAnimation = () => {
       setIsVisible(true);
       
-      // Reset animation after 6 seconds
       const timeout = setTimeout(() => {
         setIsVisible(false);
       }, 6000);
@@ -18,11 +17,9 @@ export const MatchAnimation = () => {
       return timeout;
     };
 
-    // Initial delay of 1s
     const initialTimeout = setTimeout(() => {
       const timeout = showAnimation();
       
-      // Set up the interval for subsequent animations
       const interval = setInterval(() => {
         clearTimeout(timeout);
         showAnimation();
@@ -35,7 +32,7 @@ export const MatchAnimation = () => {
   }, []);
 
   return (
-    <div className="relative h-72 md:h-96 w-full max-w-xl mx-auto py-12 md:py-16 px-4 md:px-8 overflow-visible rounded-xl flex justify-center items-center">
+    <div className="relative h-72 md:h-96 w-full max-w-xl mx-auto overflow-visible rounded-xl flex justify-center items-center">
       <div className="relative w-64 md:w-80 h-72 md:h-96">
         {/* Photographer Card */}
         <div className="absolute left-0 md:left-2 w-56 md:w-72 h-72 md:h-96 rounded-3xl shadow-xl bg-white border-4 border-white overflow-hidden transform -translate-x-[35%] rotate-12 z-10">
@@ -75,8 +72,8 @@ export const MatchAnimation = () => {
         <div
           className={cn(
             "absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2",
-            "bg-gray-900/80 backdrop-blur-lg rounded-2xl px-4 py-2.5",
-            "flex items-center space-x-2.5 z-20",
+            "bg-gray-900/80 backdrop-blur-lg rounded-2xl px-4 py-2",
+            "flex items-center gap-2 z-20 whitespace-nowrap",
             "transition-all duration-500",
             isVisible
               ? "scale-100 translate-y-0 opacity-100"
