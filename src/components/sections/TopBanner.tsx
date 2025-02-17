@@ -10,18 +10,10 @@ export const TopBanner = () => {
   return (
     <div className="bg-accent text-white py-2 px-4">
       <div className="container mx-auto flex items-center justify-between">
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? (
-            <X className="h-6 w-6" />
-          ) : (
-            <Menu className="h-6 w-6" />
-          )}
-        </button>
+        {/* Logo */}
+        <Link to="/" className="flex items-center">
+          <span className="text-xl font-bold">WedMatch</span>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
@@ -50,6 +42,34 @@ export const TopBanner = () => {
             Contact Us
           </Link>
         </nav>
+
+        <div className="flex items-center gap-4">
+          {/* Desktop Get Started Button */}
+          <div className="hidden md:block">
+            <Button 
+              size="sm" 
+              variant="secondary"
+              asChild
+            >
+              <Link to="/match">
+                Get Started
+              </Link>
+            </Button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -86,18 +106,6 @@ export const TopBanner = () => {
             </nav>
           </div>
         )}
-
-        <div className="hidden md:flex items-center gap-4">
-          <Button 
-            size="sm" 
-            variant="secondary"
-            asChild
-          >
-            <Link to="/match">
-              Get Started
-            </Link>
-          </Button>
-        </div>
       </div>
     </div>
   );
