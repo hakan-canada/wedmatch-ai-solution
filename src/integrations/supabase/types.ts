@@ -9,6 +9,38 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
+      vendor_gallery: {
+        Row: {
+          created_at: string
+          id: string
+          image_url: string
+          sort_order: number | null
+          vendor_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          image_url: string
+          sort_order?: number | null
+          vendor_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          image_url?: string
+          sort_order?: number | null
+          vendor_id?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "vendor_gallery_vendor_id_fkey"
+            columns: ["vendor_id"]
+            isOneToOne: false
+            referencedRelation: "vendors"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       vendor_services: {
         Row: {
           created_at: string
@@ -38,6 +70,38 @@ export type Database = {
           },
         ]
       }
+      vendor_videos: {
+        Row: {
+          created_at: string
+          id: string
+          title: string | null
+          vendor_id: string | null
+          youtube_url: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          title?: string | null
+          vendor_id?: string | null
+          youtube_url: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          title?: string | null
+          vendor_id?: string | null
+          youtube_url?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "vendor_videos_vendor_id_fkey"
+            columns: ["vendor_id"]
+            isOneToOne: false
+            referencedRelation: "vendors"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       vendors: {
         Row: {
           base_location: string
@@ -54,6 +118,7 @@ export type Database = {
           second_shooter_option: boolean | null
           style_tags: string[] | null
           travel_fee_details: string | null
+          travel_to_venue: boolean | null
           updated_at: string
           vendor_type: string
         }
@@ -72,6 +137,7 @@ export type Database = {
           second_shooter_option?: boolean | null
           style_tags?: string[] | null
           travel_fee_details?: string | null
+          travel_to_venue?: boolean | null
           updated_at?: string
           vendor_type: string
         }
@@ -90,6 +156,7 @@ export type Database = {
           second_shooter_option?: boolean | null
           style_tags?: string[] | null
           travel_fee_details?: string | null
+          travel_to_venue?: boolean | null
           updated_at?: string
           vendor_type?: string
         }
