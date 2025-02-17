@@ -8,6 +8,8 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { TopBanner } from "@/components/sections/TopBanner";
 import { Footer } from "@/components/sections/Footer";
+import { SecureBooking } from "@/components/sections/SecureBooking";
+import { CreatorSection } from "@/components/sections/CreatorSection";
 
 const Index = () => {
   return (
@@ -19,6 +21,8 @@ const Index = () => {
       <StyleGallery />
       <HowItWorks />
       <Testimonials />
+      <SecureBooking />
+      <CreatorSection />
       <FinalCTA />
       <Footer />
     </div>
