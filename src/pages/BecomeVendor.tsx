@@ -1,3 +1,4 @@
+
 import { ArrowRight, Check, Shield, Gift, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AuroraBackground } from "@/components/ui/aurora-background";
@@ -41,7 +42,7 @@ const BecomeVendor = () => {
               Become a Vendor
             </h1>
             <p className="text-xl text-muted-foreground dark:text-slate-200">
-              Grow Your Bookings Without Breaking the Bank
+              We simplify bookings for couples and vendors—more gigs, no hidden fees.
             </p>
           </div>
 
@@ -129,11 +130,11 @@ const BecomeVendor = () => {
           </div>
 
           <div className="max-w-2xl mx-auto mt-16 text-center">
-            <h2 className="text-2xl font-bold mb-4">
+            <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
               Transparent Pricing, Real Results
             </h2>
-            <p className="text-muted-foreground mb-8">
-              Pro vendors enjoy lower commission rates and get their subscription reinvested into targeted marketing campaigns to help grow their business.
+            <p className="text-muted-foreground dark:text-slate-200 mb-8">
+              Pro vendors enjoy lower commission rates and get their subscription reinvested into targeted marketing campaigns to help grow their business. Unlike bigger directories, we focus on practical features that help you land more gigs—not flashy data dashboards or hidden fees.
             </p>
             <div className="flex items-center justify-center gap-2">
               <Shield className="h-5 w-5 text-primary" />
