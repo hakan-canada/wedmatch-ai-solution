@@ -21,9 +21,9 @@ const Index = () => {
       <StyleGallery />
       <HowItWorks />
       <Testimonials />
+      <FinalCTA />
       <SecureBooking />
       <CreatorSection />
-      <FinalCTA />
       <Footer />
     </div>
   );
