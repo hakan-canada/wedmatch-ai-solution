@@ -1,12 +1,30 @@
 
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
+import { Menu, X } from "lucide-react";
 
 export const TopBanner = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <div className="bg-accent text-white py-2 px-4">
       <div className="container mx-auto flex items-center justify-between">
-        <nav className="flex items-center gap-6">
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
+        </button>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-6">
           <Link 
             to="/photographers" 
             className="text-sm hover:text-white/80 transition-colors"
@@ -32,6 +50,43 @@ export const TopBanner = () => {
             Contact Us
           </Link>
         </nav>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="absolute top-full left-0 right-0 bg-accent z-50 md:hidden">
+            <nav className="flex flex-col py-4 px-4 border-t border-white/10">
+              <Link 
+                to="/photographers" 
+                className="py-3 text-sm hover:text-white/80 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Wedding Photographers
+              </Link>
+              <Link 
+                to="/videographers" 
+                className="py-3 text-sm hover:text-white/80 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Wedding Videographers
+              </Link>
+              <Link 
+                to="/match" 
+                className="py-3 text-sm hover:text-white/80 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Find Your Match
+              </Link>
+              <Link 
+                to="/contact" 
+                className="py-3 text-sm hover:text-white/80 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact Us
+              </Link>
+            </nav>
+          </div>
+        )}
+
         <div className="hidden md:flex items-center gap-4">
           <Button 
             size="sm" 
