@@ -18,7 +18,30 @@ type VendorCardProps = {
 };
 
 export const VendorCard = ({ vendor, type }: VendorCardProps) => {
-  const images = vendor.gallery || [{ image_url: vendor.featured_image_url }];
+  // Create a gallery array with sample images if no gallery exists
+  const images = vendor.gallery || [
+    { 
+      id: '1',
+      vendor_id: vendor.id,
+      image_url: vendor.featured_image_url || 'https://images.unsplash.com/photo-1460574283810-2aab119d8511',
+      sort_order: 0,
+      created_at: new Date().toISOString()
+    },
+    {
+      id: '2',
+      vendor_id: vendor.id,
+      image_url: 'https://images.unsplash.com/photo-1500375592092-40eb2168fd21',
+      sort_order: 1,
+      created_at: new Date().toISOString()
+    },
+    {
+      id: '3',
+      vendor_id: vendor.id,
+      image_url: 'https://images.unsplash.com/photo-1470813740244-df37b8c1edcb',
+      sort_order: 2,
+      created_at: new Date().toISOString()
+    }
+  ];
 
   return (
     <Link to={`/${type}/${vendor.id}`}>
@@ -58,19 +81,21 @@ export const VendorCard = ({ vendor, type }: VendorCardProps) => {
             <div className="flex items-center gap-2 text-muted-foreground">
               <MapPin className="w-4 h-4" />
               <span>{vendor.base_location}</span>
-              {vendor.travel_to_venue && (
-                <Badge variant="outline" className="ml-2">Travels to venue</Badge>
-              )}
             </div>
           </div>
         </CardHeader>
         
         <CardContent className="space-y-4">
           <div>
-            <p className="text-sm font-medium text-muted-foreground mb-2">Style</p>
+            {vendor.travel_to_venue && (
+              <div className="mb-4">
+                <Badge variant="outline">Travels to venue</Badge>
+              </div>
+            )}
+            <p className="text-sm font-medium text-muted-foreground mb-2">Cultural Experience</p>
             <div className="flex flex-wrap gap-2">
-              {vendor.style_tags.slice(0, 3).map((tag) => (
-                <Badge key={tag} variant="secondary">{tag}</Badge>
+              {vendor.cultural_experience.slice(0, 3).map((culture) => (
+                <Badge key={culture} variant="secondary">{culture}</Badge>
               ))}
             </div>
           </div>
