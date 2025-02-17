@@ -28,6 +28,7 @@ const BecomeVendor = () => {
       "Priority support",
       "SEO suggestions for your website",
       "Enhanced profile customization",
+      "Access to photo editing requests",
     ],
   };
 
@@ -48,7 +49,7 @@ const BecomeVendor = () => {
           <Card className="relative">
             <CardHeader className="text-center">
               <CardTitle className="text-2xl">Free Plan</CardTitle>
-              <CardDescription>Perfect for getting started</CardDescription>
+              <CardDescription>Basic listing and bookings</CardDescription>
               <div className="mt-4">
                 <span className="text-4xl font-bold">$0</span>
                 <span className="text-muted-foreground">/month</span>
@@ -96,14 +97,25 @@ const BecomeVendor = () => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 p-4 bg-secondary/50 rounded-lg">
-                <h4 className="font-medium flex items-center gap-2 mb-2">
-                  <Gift className="h-5 w-5 text-primary" />
-                  Your Subscription Reinvested
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  We invest your monthly subscription directly into targeted ad campaigns across social media and search platforms to bring you more leads and bookings.
-                </p>
+              <div className="mt-6 p-4 bg-secondary/50 rounded-lg space-y-4">
+                <div>
+                  <h4 className="font-medium flex items-center gap-2 mb-2">
+                    <Gift className="h-5 w-5 text-primary" />
+                    Your Subscription Reinvested
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    We invest your monthly subscription directly into targeted ad campaigns across social media and search platforms to bring you more leads and bookings.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-medium flex items-center gap-2 mb-2">
+                    <Shield className="h-5 w-5 text-primary" />
+                    Our Lead Guarantee
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    If we don't find you any leads for two consecutive months, you'll get the next two months free.
+                  </p>
+                </div>
               </div>
             </CardContent>
             <CardFooter>
@@ -120,7 +132,7 @@ const BecomeVendor = () => {
             Transparent Pricing, Real Results
           </h2>
           <p className="text-muted-foreground mb-8">
-            Whether you choose Free or Pro, you'll only pay when you get bookings. Pro vendors enjoy lower commission rates and get their subscription reinvested into targeted marketing campaigns to help grow their business.
+            Pro vendors enjoy lower commission rates and get their subscription reinvested into targeted marketing campaigns to help grow their business.
           </p>
           <div className="flex items-center justify-center gap-2">
             <Shield className="h-5 w-5 text-primary" />
