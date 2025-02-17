@@ -2,6 +2,7 @@
 import { ArrowRight, Shield, Gift } from "lucide-react";
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { MatchingAnimation } from "./MatchingAnimation";
 
 export const Hero = () => {
   const features = [
@@ -34,7 +35,7 @@ export const Hero = () => {
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="text-center mb-12">
             <h1 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight animate-fade-up text-white">
               Find Your Perfect Wedding Photographer with AI
             </h1>
@@ -42,7 +43,11 @@ export const Hero = () => {
             <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-up max-w-2xl mx-auto" style={{ animationDelay: "0.2s" }}>
               Let AI match you with trusted professionals who fit your style and budget.
             </p>
+          </div>
+
+          <MatchingAnimation />
             
+          <div className="mt-12">
             <Button 
               size="lg"
               className="animate-fade-up bg-primary hover:bg-primary/90 text-white mb-12"
