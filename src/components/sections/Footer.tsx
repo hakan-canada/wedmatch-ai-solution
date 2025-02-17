@@ -13,11 +13,11 @@ export const Footer = () => {
             </p>
           </div>
           <div>
-            <h3 className="font-bold mb-4">Quick Links</h3>
+            <h3 className="font-bold mb-4">Find Vendors</h3>
             <ul className="space-y-2">
+              <li><Link to="/photographers" className="text-sm text-white/80 hover:text-white">Wedding Photographers</Link></li>
+              <li><Link to="/videographers" className="text-sm text-white/80 hover:text-white">Wedding Videographers</Link></li>
               <li><Link to="/match" className="text-sm text-white/80 hover:text-white">Find Your Match</Link></li>
-              <li><Link to="/styles" className="text-sm text-white/80 hover:text-white">Photography Styles</Link></li>
-              <li><Link to="/about" className="text-sm text-white/80 hover:text-white">About Us</Link></li>
             </ul>
           </div>
           <div>
