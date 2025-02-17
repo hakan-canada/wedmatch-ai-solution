@@ -2,6 +2,7 @@
 import { ArrowRight, Shield, Gift } from "lucide-react";
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { MatchAnimation } from "./MatchAnimation";
 
 export const Hero = () => {
   const features = [
@@ -22,7 +23,7 @@ export const Hero = () => {
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden section-padding bg-purple-500">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
-          {/* Smaller Avatars */}
+          {/* Avatars */}
           <div className="flex justify-center mb-8">
             <div className="flex -space-x-3">
               {testimonials.map((testimonial, i) => (
@@ -53,7 +54,7 @@ export const Hero = () => {
               <ArrowRight className="ml-2" size={18} />
             </Button>
 
-            <div className="flex flex-wrap justify-center gap-6 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.6s" }}>
+            <div className="flex flex-wrap justify-center gap-6 max-w-2xl mx-auto animate-fade-up mb-12" style={{ animationDelay: "0.6s" }}>
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2 text-white/90">
                   {index === features.length - 1 ? (
@@ -64,6 +65,11 @@ export const Hero = () => {
                   <span className="text-sm md:text-base">{feature}</span>
                 </div>
               ))}
+            </div>
+
+            {/* Animation Section */}
+            <div className="mt-12 mb-12">
+              <MatchAnimation />
             </div>
           </div>
         </div>
