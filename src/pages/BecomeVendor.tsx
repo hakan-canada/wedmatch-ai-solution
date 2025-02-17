@@ -37,10 +37,10 @@ const BecomeVendor = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h1 className="text-4xl font-bold tracking-tight mb-4">
-            Become a Vendor—Grow Your Bookings Without Breaking the Bank
+            Become a Vendor
           </h1>
           <p className="text-xl text-muted-foreground">
-            Join our platform and connect with couples looking for their perfect wedding photographer or videographer.
+            Grow Your Bookings Without Breaking the Bank
           </p>
         </div>
 
