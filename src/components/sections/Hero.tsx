@@ -2,7 +2,6 @@
 import { ArrowRight, Shield, Gift } from "lucide-react";
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { MatchingAnimation } from "./MatchingAnimation";
 
 export const Hero = () => {
   const features = [
@@ -35,43 +34,37 @@ export const Hero = () => {
             </div>
           </div>
 
-          <div className="text-center mb-12">
+          <div className="text-center">
             <h1 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight animate-fade-up text-white">
-              AI-Powered Matchmaking for Your Wedding Memories
+              Find Your Perfect Wedding Photographer with AI
             </h1>
             
             <p className="text-lg md:text-xl text-white/90 mb-8 animate-fade-up max-w-2xl mx-auto" style={{ animationDelay: "0.2s" }}>
-              Let our AI agents match you with trusted professionals who fit your style and budget.
+              Let AI match you with trusted professionals who fit your style and budget.
             </p>
-          </div>
             
-          <div className="flex flex-wrap justify-center gap-6 max-w-2xl mx-auto animate-fade-up mb-12" style={{ animationDelay: "0.4s" }}>
-            {features.map((feature, index) => (
-              <div key={index} className="flex items-center gap-2 text-white/90">
-                {index === features.length - 1 ? (
-                  <Gift className="w-5 h-5 text-primary" />
-                ) : (
-                  <Shield className="w-5 h-5 text-primary" />
-                )}
-                <span className="text-sm md:text-base">{feature}</span>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mb-16">
             <Button 
               size="lg"
-              className="animate-fade-up bg-primary hover:bg-primary/90 text-white"
-              style={{ animationDelay: "0.6s" }}
+              className="animate-fade-up bg-primary hover:bg-primary/90 text-white mb-12"
+              style={{ animationDelay: "0.4s" }}
               onClick={() => window.location.href = '/match'}
             >
               Find Your Wedding Photographer
               <ArrowRight className="ml-2" size={18} />
             </Button>
-          </div>
 
-          <div className="max-w-lg mx-auto">
-            <MatchingAnimation />
+            <div className="flex flex-wrap justify-center gap-6 max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: "0.6s" }}>
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center gap-2 text-white/90">
+                  {index === features.length - 1 ? (
+                    <Gift className="w-5 h-5 text-primary" />
+                  ) : (
+                    <Shield className="w-5 h-5 text-primary" />
+                  )}
+                  <span className="text-sm md:text-base">{feature}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
