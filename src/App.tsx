@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound";
 import MatchForm from "./pages/MatchForm";
 import Photographers from "./pages/Photographers";
 import Videographers from "./pages/Videographers";
+import VendorDetail from "./pages/VendorDetail";
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
       <Route path="/faq" element={<FAQ />} />
       <Route path="/match" element={<MatchForm />} />
       <Route path="/photographers" element={<Photographers />} />
+      <Route path="/photographers/:id" element={<VendorDetail />} />
       <Route path="/videographers" element={<Videographers />} />
+      <Route path="/videographers/:id" element={<VendorDetail />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
