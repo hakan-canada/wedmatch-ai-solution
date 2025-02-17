@@ -1,6 +1,7 @@
 
 import { ArrowRight, Check, Shield, Gift, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AuroraBackground } from "@/components/ui/aurora-background";
 import {
   Card,
   CardContent,
@@ -33,20 +34,20 @@ const BecomeVendor = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background py-16">
+    <AuroraBackground className="min-h-screen py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h1 className="text-4xl font-bold tracking-tight mb-4">
+          <h1 className="text-4xl font-bold tracking-tight mb-4 text-slate-900 dark:text-white">
             Become a Vendor
           </h1>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-muted-foreground dark:text-slate-200">
             Grow Your Bookings Without Breaking the Bank
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {/* Free Plan */}
-          <Card className="relative">
+          <Card className="relative bg-white/80 backdrop-blur-sm">
             <CardHeader className="text-center">
               <CardTitle className="text-2xl">Free Plan</CardTitle>
               <CardDescription>Basic listing and bookings</CardDescription>
@@ -74,7 +75,7 @@ const BecomeVendor = () => {
           </Card>
 
           {/* Pro Plan */}
-          <Card className="relative border-primary">
+          <Card className="relative border-primary bg-white/80 backdrop-blur-sm">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2">
               <span className="bg-primary text-primary-foreground text-sm font-medium px-3 py-1 rounded-full">
                 Recommended
@@ -128,10 +129,10 @@ const BecomeVendor = () => {
         </div>
 
         <div className="max-w-2xl mx-auto mt-16 text-center">
-          <h2 className="text-2xl font-bold mb-4">
+          <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">
             Transparent Pricing, Real Results
           </h2>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-muted-foreground dark:text-slate-200 mb-8">
             Pro vendors enjoy lower commission rates and get their subscription reinvested into targeted marketing campaigns to help grow their business.
           </p>
           <div className="flex items-center justify-center gap-2">
@@ -140,7 +141,7 @@ const BecomeVendor = () => {
           </div>
         </div>
       </div>
-    </div>
+    </AuroraBackground>
   );
 };
 
