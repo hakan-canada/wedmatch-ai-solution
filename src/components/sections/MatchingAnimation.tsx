@@ -57,7 +57,7 @@ export const MatchingAnimation = () => {
             className="h-full w-full object-cover object-center rounded-2xl"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-2xl">
-            <div className="absolute bottom-0 p-3 md:p-4 text-white">
+            <div className="absolute bottom-0 p-3 md:p-4 text-white w-full">
               <h3 className="text-base md:text-lg font-semibold">Happy Couple</h3>
               <p className="text-xs md:text-sm opacity-80">Finding Their Match</p>
             </div>
@@ -84,7 +84,7 @@ export const MatchingAnimation = () => {
                 <div
                   key={index}
                   className={cn(
-                    "absolute w-full transition-all duration-300",
+                    "absolute w-full transition-all duration-500",
                     index === currentText 
                       ? "top-0 opacity-100" 
                       : "top-6 opacity-0"
