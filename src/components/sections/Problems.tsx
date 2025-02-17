@@ -40,7 +40,7 @@ export const Problems = () => {
               </div>
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-semibold">{stat.label}</h3>
+                  <h3 className="font-semibold text-base">{stat.label}</h3>
                   <span className="text-3xl font-bold text-red-700">{stat.value}%</span>
                 </div>
                 <p className="text-gray-600 text-sm">{stat.description}</p>
